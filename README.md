@@ -11,6 +11,23 @@ Currently, we have two rough C# interfaces, `IStudentAPI` and `ICourseAPI`, with
 We would like to see how you would improve the example code. Please include a couple sentences describing your changes
 along with the rationale, along with any additional changes you would have made given more time.
 
+---
+
+### 1. Resolve Warnings
+
+**Warning**
+> The target framework 'netcoreapp2.0' is out of support and will not receive security updates in the future.
+
+**Resolution**
+
+Update projects to .NET 6 and update depenencies to corresponding versions
+
+**Commit**
+
+    build!: update projects to .NET6; bump deps; update README
+
+---
+
 ## API Design
 
 Extend the `IStudentAPI` to include methods to satisfy the following criteria:
