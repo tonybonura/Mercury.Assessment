@@ -53,6 +53,29 @@ Rename the classes and interfaces as indicated below.
 [*Stack Overflow - C# naming conventions for acronyms*](https://stackoverflow.com/questions/2109171/c-sharp-naming-conventions-for-acronyms#:~:text=DO%20capitalize%20only%20the%20first,of%20a%20camel%2Dcased%20identifier.&text=DO%20NOT%20capitalize%20any%20of,of%20a%20camel%2Dcased%20identifier.)\
 [*ktaranov - C# Coding Standards and Naming Conventions*](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
 
+### 3. Move Implementation Classes to Separate Files
+
+**Issue**\
+According to the most commonly accepted C# conventions, a .cs file should, generally, contain only one class, interface, struct or enum.
+
+While less important for smaller projects, this convention makes it easier to re-organize implementation classes into separate namespaces (or even separate projects) from your interfaces as the project grows.
+
+It's common, in fact, to deliver interfaces in a separate package from implementation classes so that a consumer of the provided service can reference the package that contains the interface without having an explicit dependancy on the actual implementation.
+
+**Resolution**\
+Move the following classes into separate .cs files as indicated below.
+
+| Class Name | Original File Name | New File Name |
+| -------- | -------------- | ----------- |
+| `SkillsTest.Lib.DbCourseApi` | `SkillsTest.Lib\ICourseApi.cs` | `SkillsTest.Lib\DbCourseApi.cs` |
+| `SkillsTest.Lib.DbStudentApi` | `SkillsTest.Lib\IStudentApi.cs` | `SkillsTest.Lib\DbStudentApi.cs` |
+
+
+**Commit**
+
+    refactor(files): move DbCourseApi and DbStudentApi into separate source files from
+    their corresponding interfaces
+
 ---
 
 ## API Design
