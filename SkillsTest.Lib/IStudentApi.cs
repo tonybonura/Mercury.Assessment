@@ -5,12 +5,12 @@ using System.Text;
 
 namespace SkillsTest.Lib
 {
-    public interface IStudentAPI
+    public interface IStudentApi
     {
         Student GetById(int id);
     }
 
-    public class DbStudentAPI : IStudentAPI
+    public class DbStudentApi : IStudentApi
     {
         public DataContext Db { get; set; }
 

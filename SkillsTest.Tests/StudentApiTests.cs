@@ -3,11 +3,11 @@ using Xunit;
 
 namespace SkillsTest.Tests
 {
-    public class StudentAPITests
+    public class StudentApiTests
     {
-        private DbStudentAPI api = new DbStudentAPI
+        private DbStudentApi api = new DbStudentApi
         {
-            Db = DataContextHelper.GetMockDb(nameof(StudentAPITests))
+            Db = DataContextHelper.GetMockDb(nameof(StudentApiTests))
         };
 
         [Fact]

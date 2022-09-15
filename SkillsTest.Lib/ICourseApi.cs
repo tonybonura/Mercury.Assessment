@@ -2,12 +2,12 @@
 
 namespace SkillsTest.Lib
 {
-    public interface ICourseAPI
+    public interface ICourseApi
     {
         Course GetById(int id);
     }
 
-    public class DbCourseAPI : ICourseAPI
+    public class DbCourseApi : ICourseApi
     {
         public DataContext Db { get; set; }
 

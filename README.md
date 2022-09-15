@@ -26,6 +26,33 @@ Update projects to .NET 6 and update depenencies to corresponding versions
 
     build!: update projects to .NET6; bump deps; update README
 
+### 2. Rename Classes and Interfaces
+
+**Issue**\
+According to the most commonly accepted C# naming conventions, acronyms should be capitalized according to the following rules. *(see references below for supporting documentation)*
+
+> capitalize both characters on two-character acronyms\
+> capitalize only the first character of acronyms with three or more characters
+
+**Resolution**\
+Rename the classes and interfaces as indicated below.
+
+    R   SkillsTest.Lib.ICourseAPI           SkillsTest.Lib.ICourseApi
+    R   SkillsTest.Lib.IStudentAPI          SkillsTest.Lib.IStudentApi
+    R   SkillsTest.Tests.CourseAPITests     SkillsTest.Tests.CourseApiTests
+    R   SkillsTest.Tests.StudentAPITests    SkillsTest.Tests.StudentApiTests
+*Note: file names are also renamed to match the new class or interface name*
+
+**Commit**
+
+    refactor(naming): rename classes and interfaces to conform to accepted conventions for 
+    capitalization of acronyms in identifiers; update README
+
+*__References - C# Naming Conventions__*\
+[*MSDN - Capitalization Rules for Identifiers*](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/capitalization-conventions#capitalization-rules-for-identifiers)\
+[*Stack Overflow - C# naming conventions for acronyms*](https://stackoverflow.com/questions/2109171/c-sharp-naming-conventions-for-acronyms#:~:text=DO%20capitalize%20only%20the%20first,of%20a%20camel%2Dcased%20identifier.&text=DO%20NOT%20capitalize%20any%20of,of%20a%20camel%2Dcased%20identifier.)\
+[*ktaranov - C# Coding Standards and Naming Conventions*](https://github.com/ktaranov/naming-convention/blob/master/C%23%20Coding%20Standards%20and%20Naming%20Conventions.md)
+
 ---
 
 ## API Design
