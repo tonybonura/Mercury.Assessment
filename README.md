@@ -86,6 +86,18 @@ also be usedto generate and publish technical documentation for your library or 
 
     docs: add xmldoc comments for public dto classes and interfaces
 
+### 5. Other Refactoring Changes
+
+Given more time and if I knew how the size and scope of this project might change over time, I might consider the following changes.
+ - Move the interfaces into a sub-folder called `Interfaces`
+ - Move the DB API classes into a sub-folder called `Implementation` or `Services`
+
+Or, depending on how the library is to be delivered, I might consider taking it a step further with the following changes.
+ - Move the DTO classes and interfaces into a separate project called `SkillsTest.Abstractions`
+ - Change namespace of DTO classes and interfaces accordingly
+ - Add a reference in the `SkillsTest.Lib` project to the new `SkillsTest.Abstractions` project
+ - Add a reference in the `SkillsTest.Tests` project to the new `SkillsTest.Abstractions` project
+
 ---
 
 ## API Design
