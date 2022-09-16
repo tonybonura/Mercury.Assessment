@@ -76,6 +76,16 @@ Move the following classes into separate .cs files as indicated below.
     refactor(files): move DbCourseApi and DbStudentApi into separate source files from
     their corresponding interfaces
 
+### 4. Add XMLDOC comments to DTO classes and interfaces
+As a general rule, XMLDOC comments should be added to public types and members of public types.
+
+These comments not only provide information to developers and consumers of the types but they can
+also be usedto generate and publish technical documentation for your library or project.
+
+**Commit**
+
+    docs: add xmldoc comments for public dto classes and interfaces
+
 ---
 
 ## API Design
