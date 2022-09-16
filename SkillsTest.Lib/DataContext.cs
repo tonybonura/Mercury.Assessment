@@ -8,6 +8,8 @@ namespace SkillsTest.Lib
 
         public DbSet<Course> Courses { get; set; }
 
+        public DbSet<StudentEnrollment> Enrollments { get; set; }
+
         public DataContext(DbContextOptions options) : base(options)
         {
             // Nothing to do here
