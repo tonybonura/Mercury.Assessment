@@ -119,6 +119,49 @@ is encouraged.
 
 Implement your newly added interface methods.
 
+---
+
+### 1. Add StudentEnrollment entity
+In order to identify students who are enrolled in a specific course or courses in which a specific student is enrolled,
+we need an entity to represent the many-to-many relationship between students and courses.  The following class was
+added for this purpose.
+
+    SkillsTest.Lib.StudentEnrollment
+
+**Commit**
+
+    feat(API Design): add StudentEnrollment entity
+
+
+### 2. Add new methods to interfaces and implement them
+
+The following methods were added to `ICourseApi`
+
+```csharp
+ICollection<Course> ICourseApi.GetAll(int pageSize, int pageNumber)
+```
+```csharp
+Course ICourseApi.GetByName(string courseName)
+```
+
+The following methods were added to `IStudentApi`
+
+```csharp
+ICollection<Student> GetAll(int pageSize, int pageNumber)
+```
+```csharp
+ICollection<Student> GetByCourseId(int courseId)
+```
+```csharp
+ICollection<Student> GetByLastName(string lastName)
+```
+
+**Commit**
+
+    feat(API Design): add new methods to APIs
+
+---
+
 ## Unit Testing
 
 In order to validate your API, what unit tests would you need to ensure it works as specified? 
