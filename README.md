@@ -168,6 +168,18 @@ In order to validate your API, what unit tests would you need to ensure it works
 
 Implement those tests in the test project.
 
+---
+
+### Update Unit Tests
+
+I was able to add unit tests for the new methods for the CourseApi but ran out of time before I could get to the StudentApi.
+
+**Commit**
+
+    feat(API Design): update unit tests
+
+---
+
 ## Time
 
 Please limit your time to 2 hours. Include a few sentences about the changes you made, or any
